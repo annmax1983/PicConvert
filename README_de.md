@@ -180,7 +180,7 @@ Copyright © 2026 PicConvert. Alle Rechte vorbehalten.
 Wenn Ihnen PicConvert hilft, erwägen Sie bitte, das Projekt zu unterstützen!
 
 <!-- Fügen Sie Ihren Unterstützungslink hier ein -->
-**[👉 PicConvert unterstützen](https://www.creem.io/payment/prod_4LTHdgvsMSURUjevX47qHE)**
+**[👉 PicConvert unterstützen](https://annmax1983.github.io/PicConvert/)**
 
 ---
 

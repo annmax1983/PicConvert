@@ -180,7 +180,7 @@ Copyright © 2026 PicConvert. 保留所有权利。
 如果你觉得 PicConvert 有用，欢迎支持项目！
 
 <!-- 在此添加支持链接 -->
-**[👉 支持 PicConvert](https://www.creem.io/payment/prod_4LTHdgvsMSURUjevX47qHE)**
+**[👉 支持 PicConvert](https://annmax1983.github.io/PicConvert/)**
 
 ---
 
