@@ -1,4 +1,4 @@
-# PicConvert
+# ImageConv
 
 一款轻量级浏览器扩展，可在本地将图片转换为 PNG、JPG、WEBP 和 AVIF 格式 —— 完全本地处理，零数据上传。
 
@@ -8,9 +8,9 @@
 
 ---
 
-## 为什么选择 PicConvert？
+## 为什么选择 ImageConv？
 
-大多数图片转换工具需要将文件上传到远程服务器。PicConvert 使用 Canvas API 在浏览器内完成所有处理 —— 数据永远不会离开你的设备。
+大多数图片转换工具需要将文件上传到远程服务器。ImageConv 使用 Canvas API 在浏览器内完成所有处理 —— 数据永远不会离开你的设备。
 
 | 优势 | 说明 |
 |------|------|
@@ -33,7 +33,7 @@
 | 🎚️ **可调质量** | 通过弹窗滑块微调 JPG、WEBP、AVIF 的导出质量 |
 | 🔗 **智能链接清洗** | 剥离 CDN 追踪参数（`w=`、`h=`、`format=`、`watermark=` 等）以获取原始图片 |
 | 📁 **拖拽转换** | 将本地图片文件拖放到弹窗即可转换，无需右键 |
-| 🌐 **跨域支持** | 通过 Service Worker 从任意网站获取图片 —— 绕过 CORS 和画布污染问题 |
+| 🌐 **跨域支持** | 通过 Service Worker 从任意网站获取图片 —— 内部处理跨域资源 |
 | 🔤 **6 语言国际化** | 右键菜单和界面自动匹配浏览器语言（EN/ES/DE/JA/FR/ZH-CN） |
 | 🛡️ **JPG 白底填充** | PNG 转 JPG 时自动用白色填充透明背景 |
 | ⏱️ **重复点击拦截** | 2 秒内对同一图片的重复操作自动忽略 |
@@ -45,11 +45,11 @@
 
 <!-- 替换为实际截图 -->
 <p align="center">
-  <img src="assets/popup.png" alt="PicConvert 弹窗" width="360">
+  <img src="screenshots/popup.png" alt="ImageConv 弹窗" width="360">
 </p>
 
 <p align="center">
-  <img src="assets/context-menu.png" alt="PicConvert 右键菜单">
+  <img src="screenshots/context-menu.png" alt="ImageConv 右键菜单">
 </p>
 
 ---
@@ -76,7 +76,7 @@
    - **Edge**：`edge://extensions/`
 2. 启用**开发者模式**（右上角开关）
 3. 点击**加载已解压的扩展程序**，选择 `pic-convert` 文件夹
-4. 工具栏将出现 ✨ PicConvert 图标
+4. 工具栏将出现 ✨ ImageConv 图标
 
 ---
 
@@ -85,14 +85,14 @@
 ### 右键转换
 
 1. 在网页上右键点击任意图片
-2. 从上下文菜单中选择 **PicConvert**
+2. 从上下文菜单中选择 **ImageConv**
 3. 选择**另存为**或**复制为**
 4. 选择格式：PNG、JPG、WEBP 或 AVIF
 5. 完成 —— 文件立即下载，或图片已复制到剪贴板
 
 ### 拖拽转换
 
-1. 点击工具栏中的 PicConvert 图标打开弹窗
+1. 点击工具栏中的 ImageConv 图标打开弹窗
 2. 将本地图片文件拖放到拖拽区域
 3. 选择目标格式
 4. 转换后的文件自动下载
@@ -106,7 +106,7 @@
 ## 右键菜单结构
 
 ```
-PicConvert
+ImageConv
 ├── 另存为 PNG（无损）
 ├── 另存为 JPG（高质量）
 ├── 另存为 WEBP（紧凑）
@@ -123,7 +123,7 @@ PicConvert
 
 ## 隐私
 
-PicConvert 以隐私为核心原则：
+ImageConv 以隐私为核心原则：
 
 - ✅ **零数据上传** —— 所有图片处理在浏览器内存中完成
 - ✅ **无分析** —— 无追踪、无遥测、无远程调用
@@ -139,7 +139,7 @@ PicConvert 以隐私为核心原则：
 ```
 右键点击图片
        ↓
-Service Worker 获取图片 Blob（绕过 CORS）
+Service Worker 获取图片 Blob（跨域处理）
        ↓
 将 Blob 发送到离屏文档（具有 Canvas 访问权限的隐藏 DOM）
        ↓
@@ -171,16 +171,16 @@ Canvas 以原始分辨率绘制图片
 
 ## 许可
 
-Copyright © 2026 PicConvert. 保留所有权利。
+Copyright © 2026 ImageConv. 保留所有权利。
 
 ---
 
 ## ❤️ 支持
 
-如果你觉得 PicConvert 有用，欢迎支持项目！
+如果你觉得 ImageConv 有用，欢迎支持项目！
 
 <!-- 在此添加支持链接 -->
-**[👉 支持 PicConvert](https://annmax1983.github.io/PicConvert/)**
+**[👉 支持 ImageConv](https://annmax1983.github.io/ImageConv/)**
 
 ---
 

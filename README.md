@@ -1,4 +1,4 @@
-# PicConvert
+# ImageConv
 
 English | [中文](README_zh.md) | [Español](README_es.md) | [Deutsch](README_de.md) | [日本語](README_ja.md) | [Français](README_fr.md)
 
@@ -8,9 +8,9 @@ A lightweight browser extension that converts images between PNG, JPG, WEBP, and
 
 ---
 
-## Why PicConvert?
+## Why ImageConv?
 
-Most image conversion tools require uploading your files to a remote server. PicConvert does everything inside your browser using the Canvas API — no data ever leaves your machine.
+Most image conversion tools require uploading your files to a remote server. ImageConv does everything inside your browser using the Canvas API — no data ever leaves your machine.
 
 | Advantage | Detail |
 |-----------|--------|
@@ -33,7 +33,7 @@ Most image conversion tools require uploading your files to a remote server. Pic
 | 🎚️ **Adjustable Quality** | Fine-tune export quality for JPG, WEBP, and AVIF via sliders in the popup |
 | 🔗 **Smart Link Cleaning** | Strips CDN tracking parameters (`w=`, `h=`, `format=`, `watermark=`, etc.) to fetch original images |
 | 📁 **Drag & Drop** | Drop local image files onto the popup to convert without right-clicking |
-| 🌐 **Cross-Origin Support** | Fetches images from any website via Service Worker — bypasses CORS and canvas taint issues |
+| 🌐 **Cross-Origin Support** | Fetches images from any website via Service Worker — handles cross-origin resources internally |
 | 🔤 **6-Language i18n** | Context menu and UI auto-match your browser language (EN/ES/DE/JA/FR/ZH-CN) |
 | 🛡️ **JPG White Fill** | Automatically fills transparent backgrounds with white when converting PNG → JPG |
 | ⏱️ **Duplicate Guard** | Ignores repeated clicks on the same image within 2 seconds |
@@ -45,11 +45,11 @@ Most image conversion tools require uploading your files to a remote server. Pic
 
 <!-- Replace with actual screenshots -->
 <p align="center">
-  <img src="assets/popup.png" alt="PicConvert Popup" width="360">
+  <img src="screenshots/popup.png" alt="ImageConv Popup" width="360">
 </p>
 
 <p align="center">
-  <img src="assets/context-menu.png" alt="PicConvert Context Menu">
+  <img src="screenshots/context-menu.png" alt="ImageConv Context Menu">
 </p>
 
 ---
@@ -76,7 +76,7 @@ Most image conversion tools require uploading your files to a remote server. Pic
    - **Edge**: `edge://extensions/`
 2. Enable **Developer mode** (top-right toggle)
 3. Click **Load unpacked** and select the `pic-convert` folder
-4. The ✨ PicConvert icon will appear in your toolbar
+4. The ✨ ImageConv icon will appear in your toolbar
 
 ---
 
@@ -85,14 +85,14 @@ Most image conversion tools require uploading your files to a remote server. Pic
 ### Right-Click Conversion
 
 1. Right-click any image on a webpage
-2. Select **PicConvert** from the context menu
+2. Select **ImageConv** from the context menu
 3. Choose **Save as** or **Copy as**
 4. Pick your format: PNG, JPG, WEBP, or AVIF
 5. Done — file downloads instantly, or image is copied to clipboard
 
 ### Drag & Drop
 
-1. Click the PicConvert icon in your toolbar to open the popup
+1. Click the ImageConv icon in your toolbar to open the popup
 2. Drag a local image file onto the drop zone
 3. Select your target format
 4. The converted file downloads automatically
@@ -106,7 +106,7 @@ Open the popup to adjust export quality for JPG, WEBP, and AVIF using the slider
 ## Context Menu Structure
 
 ```
-PicConvert
+ImageConv
 ├── Save as PNG (Lossless)
 ├── Save as JPG (High Quality)
 ├── Save as WEBP (Compact)
@@ -123,7 +123,7 @@ The **Copy as** and **Save as** menus only appear when right-clicking on images 
 
 ## Privacy
 
-PicConvert is built with privacy as a core principle:
+ImageConv is built with privacy as a core principle:
 
 - ✅ **Zero data upload** — All image processing happens in your browser's memory
 - ✅ **No analytics** — No tracking, no telemetry, no remote calls
@@ -139,7 +139,7 @@ PicConvert is built with privacy as a core principle:
 ```
 Right-click image
        ↓
-Service Worker fetches image blob (bypasses CORS)
+Service Worker fetches image blob (handles cross-origin)
        ↓
 Sends blob to Offscreen Document (hidden DOM with Canvas access)
        ↓
@@ -171,16 +171,16 @@ All quality values are adjustable via sliders in the popup (range: 10–100).
 
 ## License
 
-Copyright © 2026 PicConvert. All rights reserved.
+Copyright © 2026 ImageConv. All rights reserved.
 
 ---
 
 ## ❤️ Support
 
-If you find PicConvert helpful, consider supporting the project!
+If you find ImageConv helpful, consider supporting the project!
 
 <!-- Add your support link here -->
-**[👉 Support PicConvert](https://annmax1983.github.io/PicConvert/)**
+**[👉 Support ImageConv](https://annmax1983.github.io/ImageConv/)**
 
 ---
 

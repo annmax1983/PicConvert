@@ -1,4 +1,4 @@
-# PicConvert
+# ImageConv
 
 Une extension de navigateur légère qui convertit des images entre les formats PNG, JPG, WEBP et AVIF — entièrement localement, sans upload de données.
 
@@ -8,9 +8,9 @@ Une extension de navigateur légère qui convertit des images entre les formats 
 
 ---
 
-## Pourquoi PicConvert ?
+## Pourquoi ImageConv ?
 
-La plupart des outils de conversion d'images nécessitent d'uploader vos fichiers sur un serveur distant. PicConvert fait tout dans votre navigateur avec l'API Canvas — vos données ne quittent jamais votre appareil.
+La plupart des outils de conversion d'images nécessitent d'uploader vos fichiers sur un serveur distant. ImageConv fait tout dans votre navigateur avec l'API Canvas — vos données ne quittent jamais votre appareil.
 
 | Avantage | Détail |
 |----------|--------|
@@ -33,7 +33,7 @@ La plupart des outils de conversion d'images nécessitent d'uploader vos fichier
 | 🎚️ **Qualité Ajustable** | Ajustez finement la qualité d'exportation pour JPG, WEBP et AVIF via les curseurs dans le popup |
 | 🔗 **Nettoyage Intelligent des Liens** | Supprime les paramètres de suivi CDN (`w=`, `h=`, `format=`, `watermark=`, etc.) pour obtenir les images originales |
 | 📁 **Glisser-Déposer** | Déposez des fichiers image locaux sur le popup pour convertir sans clic droit |
-| 🌐 **Support Cross-Origin** | Récupère les images de n'importe quel site web via Service Worker — contourne les problèmes CORS et canvas taint |
+| 🌐 **Support Cross-Origin** | Récupère les images de n'importe quel site web via Service Worker — gère les ressources cross-origin en interne |
 | 🔤 **i18n en 6 Langues** | Le menu contextuel et l'UI s'adaptent automatiquement à la langue de votre navigateur (EN/ES/DE/JA/FR/ZH-CN) |
 | 🛡️ **Remplissage Blanc JPG** | Remplit automatiquement les fonds transparents avec du blanc lors de la conversion PNG → JPG |
 | ⏱️ **Protection contre les Doublons** | Ignore les clics répétés sur la même image dans les 2 secondes |
@@ -45,11 +45,11 @@ La plupart des outils de conversion d'images nécessitent d'uploader vos fichier
 
 <!-- Remplacer par de vraies captures d'écran -->
 <p align="center">
-  <img src="assets/popup.png" alt="PicConvert Popup" width="360">
+  <img src="screenshots/popup.png" alt="ImageConv Popup" width="360">
 </p>
 
 <p align="center">
-  <img src="assets/context-menu.png" alt="Menu Contextuel PicConvert">
+  <img src="screenshots/context-menu.png" alt="Menu Contextuel ImageConv">
 </p>
 
 ---
@@ -76,7 +76,7 @@ La plupart des outils de conversion d'images nécessitent d'uploader vos fichier
    - **Edge** : `edge://extensions/`
 2. Activez le **Mode développeur** (interrupteur en haut à droite)
 3. Cliquez sur **Charger l'extension non empaquetée** et sélectionnez le dossier `pic-convert`
-4. L'icône ✨ PicConvert apparaîtra dans votre barre d'outils
+4. L'icône ✨ ImageConv apparaîtra dans votre barre d'outils
 
 ---
 
@@ -85,14 +85,14 @@ La plupart des outils de conversion d'images nécessitent d'uploader vos fichier
 ### Conversion par Clic Droit
 
 1. Faites un clic droit sur une image sur une page web
-2. Sélectionnez **PicConvert** dans le menu contextuel
+2. Sélectionnez **ImageConv** dans le menu contextuel
 3. Choisissez **Enregistrer sous** ou **Copier en tant que**
 4. Choisissez votre format : PNG, JPG, WEBP ou AVIF
 5. Terminé — le fichier se télécharge instantanément, ou l'image est copiée dans le presse-papiers
 
 ### Glisser-Déposer
 
-1. Cliquez sur l'icône PicConvert dans votre barre d'outils pour ouvrir le popup
+1. Cliquez sur l'icône ImageConv dans votre barre d'outils pour ouvrir le popup
 2. Déposez un fichier image local sur la zone de dépôt
 3. Sélectionnez votre format cible
 4. Le fichier converti se télécharge automatiquement
@@ -106,7 +106,7 @@ Ouvrez le popup pour ajuster la qualité d'exportation pour JPG, WEBP et AVIF à
 ## Structure du Menu Contextuel
 
 ```
-PicConvert
+ImageConv
 ├── Enregistrer sous PNG (Sans perte)
 ├── Enregistrer sous JPG (Haute qualité)
 ├── Enregistrer sous WEBP (Compact)
@@ -123,7 +123,7 @@ Les menus **Copier en tant que** et **Enregistrer sous** n'apparaissent qu'en fa
 
 ## Confidentialité
 
-PicConvert est construit avec la confidentialité comme principe fondamental :
+ImageConv est construit avec la confidentialité comme principe fondamental :
 
 - ✅ **Zéro upload de données** — Tout le traitement des images se passe en mémoire dans votre navigateur
 - ✅ **Pas d'analyse** — Pas de suivi, pas de télémétrie, pas d'appels distants
@@ -139,7 +139,7 @@ PicConvert est construit avec la confidentialité comme principe fondamental :
 ```
 Clic droit sur une image
        ↓
-Service Worker récupère le blob de l'image (contourne CORS)
+Service Worker récupère le blob de l'image (gère le cross-origin)
        ↓
 Envoie le blob au document Offscreen (DOM caché avec accès Canvas)
        ↓
@@ -171,16 +171,16 @@ Toutes les valeurs de qualité sont ajustables via les curseurs dans le popup (p
 
 ## Licence
 
-Copyright © 2026 PicConvert. Tous droits réservés.
+Copyright © 2026 ImageConv. Tous droits réservés.
 
 ---
 
 ## ❤️ Soutenir
 
-Si PicConvert vous est utile, envisagez de soutenir le projet !
+Si ImageConv vous est utile, envisagez de soutenir le projet !
 
 <!-- Ajoutez votre lien de soutien ici -->
-**[👉 Soutenir PicConvert](https://annmax1983.github.io/PicConvert/)**
+**[👉 Soutenir ImageConv](https://annmax1983.github.io/ImageConv/)**
 
 ---
 

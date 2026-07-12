@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - ImageConv</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1e293b;
+    background: #f8fafc;
+    line-height: 1.7;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .updated { font-size: 13px; color: #94a3b8; margin-bottom: 32px; }
+  h2 { font-size: 18px; font-weight: 600; margin: 28px 0 12px; color: #334155; }
+  p { margin-bottom: 12px; font-size: 15px; color: #475569; }
+  ul { margin: 0 0 12px 20px; }
+  li { margin-bottom: 6px; font-size: 15px; color: #475569; }
+  .highlight {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .highlight strong { color: #065f46; }
+  code {
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  .contact { margin-top: 32px; padding-top: 24px; border-top: 1px solid #e2e8f0; }
+  .contact a { color: #667eea; }
+  .footer-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .footer-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="footer-link" href="https://annmax1983.github.io/ImageConv/">← ImageConv</a>
+  <h1 id="title"></h1>
+  <p class="updated" id="updated"></p>
+
+  <div class="highlight" id="highlight"></div>
+
+  <h2 id="hWhat"></h2>
+  <p id="pWhat"></p>
+
+  <h2 id="hCollect"></h2>
+  <p id="pCollect"></p>
+  <ul id="listCollect"></ul>
+
+  <h2 id="hTransmit"></h2>
+  <p id="pTransmit"></p>
+
+  <h2 id="hStore"></h2>
+  <p id="pStore"></p>
+  <ul id="listStore"></ul>
+  <p id="pStoreNote"></p>
+
+  <h2 id="hPerms"></h2>
+  <p id="pPerms"></p>
+  <ul id="listPerms"></ul>
+  <p id="pHost"></p>
+
+  <h2 id="hThird"></h2>
+  <p id="pThird"></p>
+
+  <h2 id="hChildren"></h2>
+  <p id="pChildren"></p>
+
+  <h2 id="hChanges"></h2>
+  <p id="pChanges"></p>
+
+  <div class="contact">
+    <h2 id="hContact"></h2>
+    <p id="pContact"></p>
+  </div>
+</div>
+
+<script>
+const I18N = {
+  en: {
+    title: 'Privacy Policy',
+    updated: 'Last updated: July 7, 2026',
+    highlight: '<strong>Short version:</strong> ImageConv does not collect, transmit, or store any of your data. All image processing happens entirely within your browser. Your images never leave your device.',
+    hWhat: 'What ImageConv Does',
+    pWhat: 'ImageConv is a browser extension that converts images between PNG, JPG, WEBP, and AVIF formats. All conversion is performed locally in your browser using the Canvas API.',
+    hCollect: 'Data Collection',
+    pCollect: 'ImageConv does <strong>not</strong> collect any personal data, including but not limited to:',
+    listCollect: ['Images or image content', 'Browsing history', 'Cookies or tracking identifiers', 'IP addresses or location data', 'Usage analytics or telemetry'],
+    hTransmit: 'Data Transmission',
+    pTransmit: 'ImageConv does <strong>not</strong> transmit any data to external servers. There are no remote API calls, no analytics services, and no third-party integrations. Your network is never used for image processing.',
+    hStore: 'Data Storage',
+    pStore: 'ImageConv stores only the following data locally on your device using <code>chrome.storage.local</code>:',
+    listStore: ['<strong>Settings</strong> — your quality preferences and toggle states', '<strong>Usage count</strong> — a simple counter of total conversions (not linked to any identity)'],
+    pStoreNote: 'This data never leaves your browser and is deleted when you uninstall the extension.',
+    hPerms: 'Permissions',
+    pPerms: 'ImageConv requests the minimum permissions necessary:',
+    listPerms: ['<strong>contextMenus</strong> — to add the right-click "Save as / Copy as" menu', '<strong>downloads</strong> — to save converted images to your computer', '<strong>offscreen</strong> — to run Canvas-based image conversion in a hidden document', '<strong>storage</strong> — to remember your settings locally', '<strong>scripting</strong> — to show status notifications on the page', '<strong>clipboardWrite</strong> — to copy converted images to your clipboard'],
+    pHost: 'Host permission <code>&lt;all_urls&gt;</code> is required to fetch images from any website when you right-click to convert. ImageConv does not access page content beyond the image you explicitly act on.',
+    hThird: 'Third-Party Services',
+    pThird: 'ImageConv does <strong>not</strong> use any third-party services, libraries, trackers, or analytics tools.',
+    hChildren: "Children's Privacy",
+    pChildren: 'ImageConv does not knowingly collect any data from children or any other users.',
+    hChanges: 'Changes to This Policy',
+    pChanges: 'If this privacy policy is updated, the changes will be published on this page with a revised "Last updated" date.',
+    hContact: 'Contact',
+    pContact: 'If you have questions about this privacy policy, please open an issue on <a href="https://github.com/annmax1983/ImageConv">GitHub</a>.'
+  },
+  'zh-CN': {
+    title: '隐私条款',
+    updated: '最后更新：2026 年 7 月 7 日',
+    highlight: '<strong>简要说明：</strong>ImageConv 不收集、传输或存储您的任何数据。所有图片处理完全在浏览器内完成，图片永远不会离开您的设备。',
+    hWhat: 'ImageConv 是什么',
+    pWhat: 'ImageConv 是一款浏览器扩展，用于在 PNG、JPG、WEBP 和 AVIF 格式之间转换图片。所有转换均通过 Canvas API 在浏览器本地完成。',
+    hCollect: '数据收集',
+    pCollect: 'ImageConv <strong>不会</strong>收集任何个人数据，包括但不限于：',
+    listCollect: ['图片或图片内容', '浏览历史', 'Cookie 或跟踪标识符', 'IP 地址或位置数据', '使用分析或遥测数据'],
+    hTransmit: '数据传输',
+    pTransmit: 'ImageConv <strong>不会</strong>向外部服务器传输任何数据。没有远程 API 调用、没有分析服务、没有第三方集成。您的网络不会被用于图片处理。',
+    hStore: '数据存储',
+    pStore: 'ImageConv 仅使用 <code>chrome.storage.local</code> 在本地存储以下数据：',
+    listStore: ['<strong>设置</strong> — 您的质量偏好和开关状态', '<strong>使用计数</strong> — 总转换次数的简单计数器（不关联任何身份信息）'],
+    pStoreNote: '这些数据不会离开您的浏览器，卸载扩展时会自动删除。',
+    hPerms: '权限说明',
+    pPerms: 'ImageConv 仅请求最低必要权限：',
+    listPerms: ['<strong>contextMenus</strong> — 添加右键"另存为/复制为"菜单', '<strong>downloads</strong> — 将转换后的图片保存到电脑', '<strong>offscreen</strong> — 在隐藏文档中执行 Canvas 图片转换', '<strong>storage</strong> — 在本地记住您的设置', '<strong>scripting</strong> — 在页面上显示状态提示', '<strong>clipboardWrite</strong> — 将转换后的图片复制到剪贴板'],
+    pHost: 'Host 权限 <code>&lt;all_urls&gt;</code> 是为了在右键转换时从任意网站获取图片。ImageConv 不会访问您主动操作的图片之外的页面内容。',
+    hThird: '第三方服务',
+    pThird: 'ImageConv <strong>不会</strong>使用任何第三方服务、库、跟踪器或分析工具。',
+    hChildren: '儿童隐私',
+    pChildren: 'ImageConv 不会故意收集儿童或任何其他用户的数据。',
+    hChanges: '条款变更',
+    pChanges: '如果本隐私条款更新，变更将在本页面发布并注明新的"最后更新"日期。',
+    hContact: '联系方式',
+    pContact: '如果您对本隐私条款有疑问，请在 <a href="https://github.com/annmax1983/ImageConv">GitHub</a> 上提交 Issue。'
+  },
+  ja: {
+    title: 'プライバシーポリシー',
+    updated: '最終更新：2026年7月7日',
+    highlight: '<strong>要約：</strong>ImageConv はお客様のデータを収集、送信、保存しません。すべての画像処理はブラウザ内で完結します。画像がデバイスから外に出ることはありません。',
+    hWhat: 'ImageConv とは',
+    pWhat: 'ImageConv は PNG、JPG、WEBP、AVIF 形式間で画像を変換するブラウザ拡張機能です。すべての変換は Canvas API を使用してブラウザ内でローカルに実行されます。',
+    hCollect: 'データの収集',
+    pCollect: 'ImageConv は以下の個人データを<strong>収集しません</strong>：',
+    listCollect: ['画像または画像コンテンツ', '閲覧履歴', 'Cookie または追跡識別子', 'IP アドレスまたは位置情報', '使用分析またはテレメトリ'],
+    hTransmit: 'データの送信',
+    pTransmit: 'ImageConv は外部サーバーにデータを<strong>送信しません</strong>。リモート API 呼び出し、分析サービス、サードパーティ統合はありません。ネットワークが画像処理に使用されることはありません。',
+    hStore: 'データの保存',
+    pStore: 'ImageConv は <code>chrome.storage.local</code> を使用して、以下のデータのみをローカルに保存します：',
+    listStore: ['<strong>設定</strong> — 品質設定とトグル状態', '<strong>使用回数</strong> — 総変換回数のカウンター（個人情報とは関連付けられていません）'],
+    pStoreNote: 'このデータはブラウザから外に出ず、拡張機能をアンインストールすると自動的に削除されます。',
+    hPerms: '権限の説明',
+    pPerms: 'ImageConv は最小限の必要な権限のみをリクエストします：',
+    listPerms: ['<strong>contextMenus</strong> — 右クリック「名前を付けて保存/コピー」メニューの追加', '<strong>downloads</strong> — 変換した画像をパソコンに保存', '<strong>offscreen</strong> — 非表示ドキュメントで Canvas ベースの画像変換を実行', '<strong>storage</strong> — 設定をローカルに保存', '<strong>scripting</strong> — ページ上にステータス通知を表示', '<strong>clipboardWrite</strong> — 変換した画像をクリップボードにコピー'],
+    pHost: 'ホスト権限 <code>&lt;all_urls&gt;</code> は右クリック変換時に任意のウェブサイトから画像を取得するために必要です。ImageConv はお客様が明示的に操作した画像以外のページコンテンツにはアクセスしません。',
+    hThird: 'サードパーティサービス',
+    pThird: 'ImageConv はサードパーティのサービス、ライブラリ、トラッカー、分析ツールを<strong>使用しません</strong>。',
+    hChildren: 'お子様のプライバシー',
+    pChildren: 'ImageConv はお子様またはその他のユーザーのデータを意図的に収集することはありません。',
+    hChanges: 'ポリシーの変更',
+    pChanges: '本プライバシーポリシーが更新された場合、変更内容はこのページに更新日付とともに公開されます。',
+    hContact: 'お問い合わせ',
+    pContact: '本プライバシーポリシーに関するご質問は、<a href="https://github.com/annmax1983/ImageConv">GitHub</a> で Issue を作成してください。'
+  },
+  de: {
+    title: 'Datenschutzrichtlinie',
+    updated: 'Letzte Aktualisierung: 7. Juli 2026',
+    highlight: '<strong>Kurzfassung:</strong> ImageConv erfasst, übermittelt oder speichert keine Ihrer Daten. Die gesamte Bildverarbeitung erfolgt vollständig in Ihrem Browser. Ihre Bilder verlassen niemals Ihr Gerät.',
+    hWhat: 'Was ImageConv tut',
+    pWhat: 'ImageConv ist eine Browsererweiterung, die Bilder zwischen PNG, JPG, WEBP und AVIF-Formaten konvertiert. Alle Konvertierungen werden lokal in Ihrem Browser mit der Canvas-API durchgeführt.',
+    hCollect: 'Datenerfassung',
+    pCollect: 'ImageConv erfasst <strong>keine</strong> personenbezogenen Daten, einschließlich, aber nicht beschränkt auf:',
+    listCollect: ['Bilder oder Bildinhalte', 'Browserverlauf', 'Cookies oder Tracking-Kennungen', 'IP-Adressen oder Standortdaten', 'Nutzungsanalysen oder Telemetrie'],
+    hTransmit: 'Datenübertragung',
+    pTransmit: 'ImageConv übermittelt <strong>keine</strong> Daten an externe Server. Es gibt keine Remote-API-Aufrufe, keine Analysedienste und keine Drittanbieter-Integrationen. Ihr Netzwerk wird nie für die Bildverarbeitung genutzt.',
+    hStore: 'Datenspeicherung',
+    pStore: 'ImageConv speichert nur die folgenden Daten lokal auf Ihrem Gerät über <code>chrome.storage.local</code>：',
+    listStore: ['<strong>Einstellungen</strong> — Ihre Qualitätseinstellungen und Schalterzustände', '<strong>Nutzungszähler</strong> — Ein einfacher Zähler für die Gesamtzahl der Konvertierungen (nicht mit einer Identität verknüpft)'],
+    pStoreNote: 'Diese Daten verlassen Ihren Browser nie und werden beim Deinstallieren der Erweiterung automatisch gelöscht.',
+    hPerms: 'Berechtigungen',
+    pPerms: 'ImageConv beantragt nur die minimal notwendigen Berechtigungen:',
+    listPerms: ['<strong>contextMenus</strong> — Zum Hinzufügen des Rechtsklick-Menüs „Speichern unter / Kopieren als"', '<strong>downloads</strong> — Zum Speichern konvertierter Bilder auf Ihrem Computer', '<strong>offscreen</strong> — Zur Durchführung der Canvas-basierten Bildkonvertierung in einem versteckten Dokument', '<strong>storage</strong> — Zum lokalen Speichern Ihrer Einstellungen', '<strong>scripting</strong> — Zum Anzeigen von Statusbenachrichtigungen auf der Seite', '<strong>clipboardWrite</strong> — Zum Kopieren konvertierter Bilder in die Zwischenablage'],
+    pHost: 'Die Host-Berechtigung <code>&lt;all_urls&gt;</code> ist erforderlich, um Bilder von jeder Website beim Rechtsklick zu konvertieren. ImageConv greift nicht auf Seiteninhalte außer dem Bild zu, auf das Sie explizit handeln.',
+    hThird: 'Dienste von Drittanbietern',
+    pThird: 'ImageConv verwendet <strong>keine</strong> Dienste, Bibliotheken, Tracker oder Analyse-Tools von Drittanbietern.',
+    hChildren: 'Datenschutz von Kindern',
+    pChildren: 'ImageConv erfasst wissentlich keine Daten von Kindern oder anderen Nutzern.',
+    hChanges: 'Änderungen dieser Richtlinie',
+    pChanges: 'Bei Aktualisierungen dieser Datenschutzrichtlinie werden die Änderungen auf dieser Seite mit einem aktualisierten Datum veröffentlicht.',
+    hContact: 'Kontakt',
+    pContact: 'Bei Fragen zu dieser Datenschutzrichtlinie erstellen Sie bitte ein Issue auf <a href="https://github.com/annmax1983/ImageConv">GitHub</a>.'
+  },
+  es: {
+    title: 'Política de Privacidad',
+    updated: 'Última actualización: 7 de julio de 2026',
+    highlight: '<strong>Versión corta:</strong> ImageConv no recopila, transmite ni almacena ninguno de sus datos. Todo el procesamiento de imágenes se realiza completamente dentro de su navegador. Sus imágenes nunca salen de su dispositivo.',
+    hWhat: 'Qué hace ImageConv',
+    pWhat: 'ImageConv es una extensión del navegador que convierte imágenes entre los formatos PNG, JPG, WEBP y AVIF. Toda la conversión se realiza localmente en su navegador usando la API Canvas.',
+    hCollect: 'Recopilación de datos',
+    pCollect: 'ImageConv <strong>no</strong> recopila ningún dato personal, incluyendo pero no limitado a:',
+    listCollect: ['Imágenes o contenido de imágenes', 'Historial de navegación', 'Cookies o identificadores de seguimiento', 'Direcciones IP o datos de ubicación', 'Analíticas de uso o telemetría'],
+    hTransmit: 'Transmisión de datos',
+    pTransmit: 'ImageConv <strong>no</strong> transmite ningún dato a servidores externos. No hay llamadas API remotas, ni servicios de analíticas, ni integraciones con terceros. Su red nunca se utiliza para el procesamiento de imágenes.',
+    hStore: 'Almacenamiento de datos',
+    pStore: 'ImageConv solo almacena los siguientes datos localmente en su dispositivo usando <code>chrome.storage.local</code>：',
+    listStore: ['<strong>Configuración</strong> — sus preferencias de calidad y estados de los controles', '<strong>Contador de uso</strong> — un contador simple del total de conversiones (no vinculado a ninguna identidad)'],
+    pStoreNote: 'Estos datos nunca salen de su navegador y se eliminan cuando desinstala la extensión.',
+    hPerms: 'Permisos',
+    pPerms: 'ImageConv solicita solo los permisos mínimos necesarios:',
+    listPerms: ['<strong>contextMenus</strong> — para agregar el menú de clic derecho "Guardar como / Copiar como"', '<strong>downloads</strong> — para guardar imágenes convertidas en su computadora', '<strong>offscreen</strong> — para ejecutar la conversión de imágenes basada en Canvas en un documento oculto', '<strong>storage</strong> — para recordar su configuración localmente', '<strong>scripting</strong> — para mostrar notificaciones de estado en la página', '<strong>clipboardWrite</strong> — para copiar imágenes convertidas al portapapeles'],
+    pHost: 'El permiso de host <code>&lt;all_urls&gt;</code> es necesario para obtener imágenes de cualquier sitio web al hacer clic derecho para convertir. ImageConv no accede al contenido de la página más allá de la imagen en la que actúa explícitamente.',
+    hThird: 'Servicios de terceros',
+    pThird: 'ImageConv <strong>no</strong> utiliza ningún servicio, biblioteca, rastreador o herramienta de análisis de terceros.',
+    hChildren: 'Privacidad de los niños',
+    pChildren: 'ImageConv no recopila conscientemente datos de niños ni de ningún otro usuario.',
+    hChanges: 'Cambios en esta política',
+    pChanges: 'Si esta política de privacidad se actualiza, los cambios se publicarán en esta página con una fecha de "Última actualización" revisada.',
+    hContact: 'Contacto',
+    pContact: 'Si tiene preguntas sobre esta política de privacidad, abra un issue en <a href="https://github.com/annmax1983/ImageConv">GitHub</a>.'
+  },
+  fr: {
+    title: 'Politique de Confidentialité',
+    updated: 'Dernière mise à jour : 7 juillet 2026',
+    highlight: '<strong>Version courte :</strong> ImageConv ne collecte, ne transmet ni ne stocke aucune de vos données. Tout le traitement d\'images s\'effectue entièrement dans votre navigateur. Vos images ne quittent jamais votre appareil.',
+    hWhat: 'Ce que fait ImageConv',
+    pWhat: 'ImageConv est une extension de navigateur qui convertit des images entre les formats PNG, JPG, WEBP et AVIF. Toute la conversion est effectuée localement dans votre navigateur en utilisant l\'API Canvas.',
+    hCollect: 'Collecte de données',
+    pCollect: 'ImageConv ne collecte <strong>aucune</strong> donnée personnelle, y compris, mais sans s\'y limiter :',
+    listCollect: ['Images ou contenu d\'images', 'Historique de navigation', 'Cookies ou identifiants de suivi', 'Adresses IP ou données de localisation', 'Analyses d\'utilisation ou télémétrie'],
+    hTransmit: 'Transmission de données',
+    pTransmit: 'ImageConv ne transmet <strong>aucune</strong> donnée à des serveurs externes. Il n\'y a pas d\'appels API distants, pas de services d\'analyse, pas d\'intégrations tierces. Votre réseau n\'est jamais utilisé pour le traitement d\'images.',
+    hStore: 'Stockage des données',
+    pStore: 'ImageConv ne stocke que les données suivantes localement sur votre appareil via <code>chrome.storage.local</code>：',
+    listStore: ['<strong>Paramètres</strong> — vos préférences de qualité et états des commutateurs', '<strong>Compteur d\'utilisation</strong> — un compteur simple du nombre total de conversions (non lié à une identité)'],
+    pStoreNote: 'Ces données ne quittent jamais votre navigateur et sont supprimées lors de la désinstallation de l\'extension.',
+    hPerms: 'Permissions',
+    pPerms: 'ImageConv ne demande que les permissions minimales nécessaires :',
+    listPerms: ['<strong>contextMenus</strong> — pour ajouter le menu clic droit « Enregistrer sous / Copier comme »', '<strong>downloads</strong> — pour enregistrer les images converties sur votre ordinateur', '<strong>offscreen</strong> — pour exécuter la conversion d\'images basée sur Canvas dans un document caché', '<strong>storage</strong> — pour mémoriser vos paramètres localement', '<strong>scripting</strong> — pour afficher les notifications d\'état sur la page', '<strong>clipboardWrite</strong> — pour copier les images converties dans le presse-papiers'],
+    pHost: 'La permission hôte <code>&lt;all_urls&gt;</code> est requise pour récupérer des images depuis n\'importe quel site web lors du clic droit pour convertir. ImageConv n\'accède pas au contenu de la page au-delà de l\'image sur laquelle vous agissez explicitement.',
+    hThird: 'Services tiers',
+    pThird: 'ImageConv n\'utilise <strong>aucun</strong> service, bibliothèque, outil de suivi ou d\'analyse tiers.',
+    hChildren: 'Confidentialité des enfants',
+    pChildren: 'ImageConv ne collecte sciemment aucune donnée d\'enfants ou de tout autre utilisateur.',
+    hChanges: 'Modifications de cette politique',
+    pChanges: 'Si cette politique de confidentialité est mise à jour, les modifications seront publiées sur cette page avec une date de « Dernière mise à jour » révisée.',
+    hContact: 'Contact',
+    pContact: 'Si vous avez des questions sur cette politique de confidentialité, veuillez ouvrir un issue sur <a href="https://github.com/annmax1983/ImageConv">GitHub</a>.'
+  }
+};
+
+const ALIASES = {
+  'zh': 'zh-CN', 'zh-TW': 'zh-CN', 'zh-Hans': 'zh-CN',
+  'es-ES': 'es', 'es-MX': 'es',
+  'de-DE': 'de', 'de-AT': 'de',
+  'fr-FR': 'fr', 'fr-CA': 'fr',
+  'ja-JP': 'ja',
+  'en-US': 'en', 'en-GB': 'en', 'en-AU': 'en'
+};
+
+function detectLang() {
+  const raw = (navigator.language || 'en');
+  const mapped = ALIASES[raw] || raw;
+  if (I18N[mapped]) return mapped;
+  const base = raw.split('-')[0];
+  return I18N[base] ? base : 'en';
+}
+
+function apply(t) {
+  document.title = t.title + ' - ImageConv';
+  document.getElementById('title').textContent = t.title;
+  document.getElementById('updated').textContent = t.updated;
+  document.getElementById('highlight').innerHTML = t.highlight;
+  document.getElementById('hWhat').textContent = t.hWhat;
+  document.getElementById('pWhat').innerHTML = t.pWhat;
+  document.getElementById('hCollect').textContent = t.hCollect;
+  document.getElementById('pCollect').innerHTML = t.pCollect;
+  document.getElementById('listCollect').innerHTML = t.listCollect.map(i => '<li>' + i + '</li>').join('');
+  document.getElementById('hTransmit').textContent = t.hTransmit;
+  document.getElementById('pTransmit').innerHTML = t.pTransmit;
+  document.getElementById('hStore').textContent = t.hStore;
+  document.getElementById('pStore').innerHTML = t.pStore;
+  document.getElementById('listStore').innerHTML = t.listStore.map(i => '<li>' + i + '</li>').join('');
+  document.getElementById('pStoreNote').innerHTML = t.pStoreNote;
+  document.getElementById('hPerms').textContent = t.hPerms;
+  document.getElementById('pPerms').innerHTML = t.pPerms;
+  document.getElementById('listPerms').innerHTML = t.listPerms.map(i => '<li>' + i + '</li>').join('');
+  document.getElementById('pHost').innerHTML = t.pHost;
+  document.getElementById('hThird').textContent = t.hThird;
+  document.getElementById('pThird').innerHTML = t.pThird;
+  document.getElementById('hChildren').textContent = t.hChildren;
+  document.getElementById('pChildren').innerHTML = t.pChildren;
+  document.getElementById('hChanges').textContent = t.hChanges;
+  document.getElementById('pChanges').innerHTML = t.pChanges;
+  document.getElementById('hContact').textContent = t.hContact;
+  document.getElementById('pContact').innerHTML = t.pContact;
+  document.documentElement.lang = detectLang();
+}
+
+apply(I18N[detectLang()]);
+</script>
+</body>
+</html>

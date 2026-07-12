@@ -1,4 +1,4 @@
-# PicConvert
+# ImageConv
 
 Eine leichtgewichtige Browser-Erweiterung, die Bilder zwischen PNG, JPG, WEBP und AVIF konvertiert — vollständig lokal, ohne Datenupload.
 
@@ -8,9 +8,9 @@ Eine leichtgewichtige Browser-Erweiterung, die Bilder zwischen PNG, JPG, WEBP un
 
 ---
 
-## Warum PicConvert?
+## Warum ImageConv?
 
-Die meisten Bildkonvertierungstools erfordern das Hochladen Ihrer Dateien auf einen Remote-Server. PicConvert erledigt alles in Ihrem Browser mit der Canvas-API — Ihre Daten verlassen niemals Ihr Gerät.
+Die meisten Bildkonvertierungstools erfordern das Hochladen Ihrer Dateien auf einen Remote-Server. ImageConv erledigt alles in Ihrem Browser mit der Canvas-API — Ihre Daten verlassen niemals Ihr Gerät.
 
 | Vorteil | Beschreibung |
 |---------|-------------|
@@ -33,7 +33,7 @@ Die meisten Bildkonvertierungstools erfordern das Hochladen Ihrer Dateien auf ei
 | 🎚️ **Anpassbare Qualität** | Feineinstellung der Exportqualität für JPG, WEBP und AVIF über Schieberegler im Popup |
 | 🔗 **Intelligente Link-Bereinigung** | Entfernt CDN-Tracking-Parameter (`w=`, `h=`, `format=`, `watermark=`, etc.) für Originalbilder |
 | 📁 **Drag & Drop** | Lokale Bilddateien per Drag & Drop auf das Popup ziehen ohne Rechtsklick |
-| 🌐 **Cross-Origin-Unterstützung** | Ruft Bilder von jeder Website über Service Worker ab — umgeht CORS- und Canvas-Taint-Probleme |
+| 🌐 **Cross-Origin-Unterstützung** | Ruft Bilder von jeder Website über Service Worker ab — verarbeitet Cross-Origin-Ressourcen intern |
 | 🔤 **6-Sprach-i18n** | Kontextmenü und UI passen sich automatisch an Ihre Browsersprache an (EN/ES/DE/JA/FR/ZH-CN) |
 | 🛡️ **JPG-Weißfüllung** | Füllt automatisch transparente Hintergründe mit Weiß bei PNG → JPG Konvertierung |
 | ⏱️ **Duplikatschutz** | Ignoriert wiederholte Klicks auf dasselbe Bild innerhalb von 2 Sekunden |
@@ -45,11 +45,11 @@ Die meisten Bildkonvertierungstools erfordern das Hochladen Ihrer Dateien auf ei
 
 <!-- Ersetzen Sie durch tatsächliche Screenshots -->
 <p align="center">
-  <img src="assets/popup.png" alt="PicConvert Popup" width="360">
+  <img src="screenshots/popup.png" alt="ImageConv Popup" width="360">
 </p>
 
 <p align="center">
-  <img src="assets/context-menu.png" alt="PicConvert Kontextmenü">
+  <img src="screenshots/context-menu.png" alt="ImageConv Kontextmenü">
 </p>
 
 ---
@@ -76,7 +76,7 @@ Die meisten Bildkonvertierungstools erfordern das Hochladen Ihrer Dateien auf ei
    - **Edge**: `edge://extensions/`
 2. Aktivieren Sie den **Entwicklermodus** (Schalter oben rechts)
 3. Klicken Sie auf **Entpackte Erweiterung laden** und wählen Sie den `pic-convert` Ordner
-4. Das ✨ PicConvert-Symbol erscheint in Ihrer Symbolleiste
+4. Das ✨ ImageConv-Symbol erscheint in Ihrer Symbolleiste
 
 ---
 
@@ -85,14 +85,14 @@ Die meisten Bildkonvertierungstools erfordern das Hochladen Ihrer Dateien auf ei
 ### Rechtsklick-Konvertierung
 
 1. Rechtsklicken Sie auf ein Bild auf einer Webseite
-2. Wählen Sie **PicConvert** aus dem Kontextmenü
+2. Wählen Sie **ImageConv** aus dem Kontextmenü
 3. Wählen Sie **Speichern unter** oder **Kopieren als**
 4. Wählen Sie Ihr Format: PNG, JPG, WEBP oder AVIF
 5. Fertig — die Datei wird sofort heruntergeladen oder das Bild in die Zwischenablage kopiert
 
 ### Drag & Drop
 
-1. Klicken Sie auf das PicConvert-Symbol in Ihrer Symbolleiste, um das Popup zu öffnen
+1. Klicken Sie auf das ImageConv-Symbol in Ihrer Symbolleiste, um das Popup zu öffnen
 2. Ziehen Sie eine lokale Bilddatei auf die Drop-Zone
 3. Wählen Sie Ihr Zielformat
 4. Die konvertierte Datei wird automatisch heruntergeladen
@@ -106,7 +106,7 @@ Die meisten Bildkonvertierungstools erfordern das Hochladen Ihrer Dateien auf ei
 ## Kontextmenü-Struktur
 
 ```
-PicConvert
+ImageConv
 ├── Speichern unter PNG (Verlustfrei)
 ├── Speichern unter JPG (Hohe Qualität)
 ├── Speichern unter WEBP (Kompakt)
@@ -123,7 +123,7 @@ Die **Kopieren als** und **Speichern unter** Menüs erscheinen nur bei Rechtskli
 
 ## Datenschutz
 
-PicConvert wurde mit Datenschutz als Kernprinzip gebaut:
+ImageConv wurde mit Datenschutz als Kernprinzip gebaut:
 
 - ✅ **Kein Datenupload** — Alle Bildverarbeitung erfolgt im Speicher Ihres Browsers
 - ✅ **Keine Analyse** — Kein Tracking, keine Telemetrie, keine Remote-Aufrufe
@@ -139,7 +139,7 @@ PicConvert wurde mit Datenschutz als Kernprinzip gebaut:
 ```
 Rechtsklick auf Bild
        ↓
-Service Worker holt Bild-Blob (umgeht CORS)
+Service Worker holt Bild-Blob (Cross-Origin-Verarbeitung)
        ↓
 Sendet Blob an Offscreen-Dokument (verstecktes DOM mit Canvas-Zugriff)
        ↓
@@ -171,16 +171,16 @@ Alle Qualitätswerte sind über Schieberegler im Popup anpassbar (Bereich: 10–
 
 ## Lizenz
 
-Copyright © 2026 PicConvert. Alle Rechte vorbehalten.
+Copyright © 2026 ImageConv. Alle Rechte vorbehalten.
 
 ---
 
 ## ❤️ Unterstützen
 
-Wenn Ihnen PicConvert hilft, erwägen Sie bitte, das Projekt zu unterstützen!
+Wenn Ihnen ImageConv hilft, erwägen Sie bitte, das Projekt zu unterstützen!
 
 <!-- Fügen Sie Ihren Unterstützungslink hier ein -->
-**[👉 PicConvert unterstützen](https://annmax1983.github.io/PicConvert/)**
+**[👉 ImageConv unterstützen](https://annmax1983.github.io/ImageConv/)**
 
 ---
 
