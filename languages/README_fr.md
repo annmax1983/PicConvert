@@ -1,10 +1,10 @@
 # ImageConv
-
+[English](../README.md) | [中文](README_zh.md) | [Español](README_es.md) | [Deutsch](README_de.md) | [日本語](README_ja.md) | Français
 Une extension de navigateur légère qui convertit des images entre les formats PNG, JPG, WEBP et AVIF — entièrement localement, sans upload de données.
 
-> Basé sur Chromium · Manifest V3 · Aucun suivi · 100% traité dans le navigateur
+> Basé sur Chromium · Manifest V3 · Aucun suivi · Entièrement traité dans le navigateur
 
-[English](README.md) | [中文](README_zh.md) | [Español](README_es.md) | [Deutsch](README_de.md) | [日本語](README_ja.md) | Français
+[English](../README.md) | [中文](README_zh.md) | [Español](README_es.md) | [Deutsch](README_de.md) | [日本語](README_ja.md) | Français
 
 ---
 
@@ -169,6 +169,16 @@ Toutes les valeurs de qualité sont ajustables via les curseurs dans le popup (p
 
 ---
 
+## Avis de droit d'auteur
+
+Cette extension ne fournit que des capacités de conversion de format d'image locale pour le traitement personnel hors ligne de l'utilisateur. Toutes les images, photos et ressources graphiques des pages web appartiennent au propriétaire original des droits d'auteur. Les utilisateurs ne doivent pas utiliser les images converties pour la reproduction commerciale, la distribution non autorisée ou d'autres actes portant atteinte aux droits d'auteur.
+
+## Rappel sur les images cross-origin
+
+La fonction de récupération d'images cross-origin est uniquement utilisée pour obtenir des ressources d'image pour la conversion de format locale. Il est interdit d'utiliser cette fonction pour crawler massivement les ressources d'images des sites web.
+
+---
+
 ## Licence
 
 Copyright © 2026 ImageConv. Tous droits réservés.
@@ -184,4 +194,3 @@ Si ImageConv vous est utile, envisagez de soutenir le projet !
 
 ---
 
-> **Note :** Toutes les fonctionnalités de conversion principales resteront toujours gratuites et sans limitations.

@@ -1,10 +1,10 @@
 # ImageConv
 
-English | [中文](README_zh.md) | [Español](README_es.md) | [Deutsch](README_de.md) | [日本語](README_ja.md) | [Français](README_fr.md)
+English | [中文](languages/README_zh.md) | [Español](languages/README_es.md) | [Deutsch](languages/README_de.md) | [日本語](languages/README_ja.md) | [Français](languages/README_fr.md)
 
 A lightweight browser extension that converts images between PNG, JPG, WEBP, and AVIF formats — entirely locally, with zero data upload.
 
-> Chromium-based · Manifest V3 · Zero tracking · 100% In-Browser Processing
+> Chromium-based · Manifest V3 · Zero tracking · Fully In-Browser Processing
 
 ---
 
@@ -169,6 +169,16 @@ All quality values are adjustable via sliders in the popup (range: 10–100).
 
 ---
 
+## Copyright Disclaimer
+
+This extension only provides local image format conversion capabilities for users' personal offline processing. All pictures, photos and graphic resources on web pages belong to the original copyright owner. Users shall not use converted images for commercial reproduction, unauthorized distribution, secondary creation and other copyright-infringing acts. All legal liabilities arising from improper use shall be borne solely by the user.
+
+## Cross-origin Image Reminder
+
+The cross-origin image fetch function is only used to obtain image resources for local format conversion. It is forbidden to use this function to mass crawl website image resources in batches, which may violate the website's access rules.
+
+---
+
 ## License
 
 Copyright © 2026 ImageConv. All rights reserved.
@@ -184,4 +194,3 @@ If you find ImageConv helpful, consider supporting the project!
 
 ---
 
-> **Note:** All core conversion features will always remain free with no limitations.

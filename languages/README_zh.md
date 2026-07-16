@@ -1,10 +1,10 @@
 # ImageConv
-
+[English](../README.md) | 中文 | [Español](README_es.md) | [Deutsch](README_de.md) | [日本語](README_ja.md) | [Français](README_fr.md)
 一款轻量级浏览器扩展，可在本地将图片转换为 PNG、JPG、WEBP 和 AVIF 格式 —— 完全本地处理，零数据上传。
 
 > 基于 Chromium · Manifest V3 · 零追踪 · 100% 浏览器内处理
 
-[English](README.md) | 中文 | [Español](README_es.md) | [Deutsch](README_de.md) | [日本語](README_ja.md) | [Français](README_fr.md)
+[English](../README.md) | 中文 | [Español](README_es.md) | [Deutsch](README_de.md) | [日本語](README_ja.md) | [Français](README_fr.md)
 
 ---
 
@@ -169,6 +169,16 @@ Canvas 以原始分辨率绘制图片
 
 ---
 
+## 版权声明
+
+本扩展仅提供本地图片格式转换能力，供用户个人离线处理使用。网页上的所有图片、照片和图形资源版权归原始版权所有者所有。用户不得将转换后的图片用于商业转载、未授权分发、二次创作等侵权行为。因不当使用产生的一切法律责任由用户自行承担。
+
+## 跨域图片使用提示
+
+跨域图片获取功能仅用于获取图片资源进行本地格式转换。禁止使用此功能批量爬取网站图片资源，这可能违反网站的访问规则。
+
+---
+
 ## 许可
 
 Copyright © 2026 ImageConv. 保留所有权利。
@@ -184,4 +194,3 @@ Copyright © 2026 ImageConv. 保留所有权利。
 
 ---
 
-> **注意：** 所有核心转换功能将始终保持免费，无任何限制。
