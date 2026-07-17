@@ -14,7 +14,7 @@ Die meisten Bildkonvertierungstools erfordern das Hochladen Ihrer Dateien auf ei
 
 | Vorteil | Beschreibung |
 |---------|-------------|
-| 🔒 **100% Privat** | Alle Verarbeitung erfolgt im Speicher Ihres Browsers. Keine Server, keine Uploads, kein Tracking. |
+| 🔒 **Privatsphäre** | Alle Verarbeitung erfolgt im Speicher Ihres Browsers. Keine Server, keine Uploads, kein Tracking. |
 | ⚡ **Sofortige Konvertierung** | Bilder ≤5MB werden in unter 500ms konvertiert. Keine Wartezeiten auf Server-Antworten. |
 | 🎯 **Null Abhängigkeiten** | Gebaut mit Vanilla JavaScript und nativen Chrome-APIs. Keine Frameworks, kein Bloat. |
 | 🌍 **6 Sprachen** | Erkennt automatisch Ihre Browsersprache — Englisch, Spanisch, Deutsch, Japanisch, Französisch, Chinesisch. |

@@ -14,7 +14,7 @@ La plupart des outils de conversion d'images nécessitent d'uploader vos fichier
 
 | Avantage | Détail |
 |----------|--------|
-| 🔒 **100% Privé** | Tout le traitement se passe en mémoire dans votre navigateur. Pas de serveurs, pas d'uploads, pas de suivi. |
+| 🔒 **Confidentialité** | Tout le traitement se passe en mémoire dans votre navigateur. Pas de serveurs, pas d'uploads, pas de suivi. |
 | ⚡ **Conversion Instantanée** | Les images ≤5MB se convertissent en moins de 500ms. Pas d'attente de réponse serveur. |
 | 🎯 **Zéro Dépendance** | Construit avec JavaScript natif et les API Chrome natives. Pas de frameworks, pas de surcharge. |
 | 🌍 **6 Langues** | Détecte automatiquement la langue de votre navigateur — anglais, espagnol, allemand, japonais, français, chinois. |

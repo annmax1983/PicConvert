@@ -1,8 +1,8 @@
 # ImageConv
 [English](../README.md) | 中文 | [Español](README_es.md) | [Deutsch](README_de.md) | [日本語](README_ja.md) | [Français](README_fr.md)
-一款轻量级浏览器扩展，可在本地将图片转换为 PNG、JPG、WEBP 和 AVIF 格式 —— 完全本地处理，零数据上传。
+一款轻量级浏览器扩展，可在本地将图片转换为 PNG、JPG、WEBP 和 AVIF 格式 —— 本地处理处理，无数据上传。
 
-> 基于 Chromium · Manifest V3 · 零追踪 · 100% 浏览器内处理
+> 基于 Chromium · Manifest V3 · 无追踪 · 100% 浏览器内处理
 
 [English](../README.md) | 中文 | [Español](README_es.md) | [Deutsch](README_de.md) | [日本語](README_ja.md) | [Français](README_fr.md)
 
@@ -14,7 +14,7 @@
 
 | 优势 | 说明 |
 |------|------|
-| 🔒 **100% 隐私** | 所有处理在浏览器内存中完成，无服务器、无上传、无追踪 |
+| 🔒 **隐私优先** | 所有处理在浏览器内存中完成，无服务器、无上传、无追踪 |
 | ⚡ **即时转换** | ≤5MB 图片转换时间低于 500ms，无需等待服务器往返 |
 | 🎯 **零依赖** | 使用原生 JavaScript 和 Chrome API 构建，无框架、无冗余 |
 | 🌍 **6 种语言** | 自动检测浏览器语言 —— 英文、西班牙文、德文、日文、法文、中文 |
@@ -125,7 +125,7 @@ ImageConv
 
 ImageConv 以隐私为核心原则：
 
-- ✅ **零数据上传** —— 所有图片处理在浏览器内存中完成
+- ✅ **无数据上传** —— 所有图片处理在浏览器内存中完成
 - ✅ **无分析** —— 无追踪、无遥测、无远程调用
 - ✅ **无 Cookie** —— 不读取或写入浏览器 Cookie
 - ✅ **无浏览历史** —— 不访问浏览数据

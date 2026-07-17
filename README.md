@@ -4,7 +4,7 @@ English | [中文](languages/README_zh.md) | [Español](languages/README_es.md) 
 
 A lightweight browser extension that converts images between PNG, JPG, WEBP, and AVIF formats — entirely locally, with zero data upload.
 
-> Chromium-based · Manifest V3 · Zero tracking · Fully In-Browser Processing
+> Chromium-based · Manifest V3 · No tracking · Fully In-Browser Processing
 
 ---
 
@@ -14,7 +14,7 @@ Most image conversion tools require uploading your files to a remote server. Ima
 
 | Advantage | Detail |
 |-----------|--------|
-| 🔒 **100% Private** | All processing happens in your browser's memory. No servers, no uploads, no tracking. |
+| 🔒 **Privacy-First** | All processing happens in your browser's memory. No servers, no uploads, no tracking. |
 | ⚡ **Instant Conversion** | Images ≤5MB convert in under 500ms. No waiting for server round-trips. |
 | 🎯 **Zero Dependencies** | Built with vanilla JavaScript and native Chrome APIs. No frameworks, no bloat. |
 | 🌍 **6 Languages** | Auto-detects your browser language — English, Spanish, German, Japanese, French, Chinese. |

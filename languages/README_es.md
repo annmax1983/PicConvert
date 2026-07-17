@@ -14,7 +14,7 @@ La mayoría de herramientas de conversión de imágenes requieren subir tus arch
 
 | Ventaja | Detalle |
 |---------|---------|
-| 🔒 **100% Privado** | Todo el procesamiento ocurre en la memoria de tu navegador. Sin servidores, sin subidas, sin rastreo. |
+| 🔒 **Privacidad** | Todo el procesamiento ocurre en la memoria de tu navegador. Sin servidores, sin subidas, sin rastreo. |
 | ⚡ **Conversión Instantánea** | Imágenes ≤5MB se convierten en menos de 500ms. Sin esperar respuestas del servidor. |
 | 🎯 **Cero Dependencias** | Construido con JavaScript nativo y APIs nativas de Chrome. Sin frameworks, sin bloat. |
 | 🌍 **6 Idiomas** | Detecta automáticamente el idioma de tu navegador — inglés, español, alemán, japonés, francés, chino. |
